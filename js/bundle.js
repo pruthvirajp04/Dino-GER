@@ -8514,7 +8514,7 @@ var GameView = /** @class */ (function (_super) {
         Laya.Physics.I.start();
     };
     GameView.prototype.onShow = function () {
-        //EventMgr_1.default.instance.dispatch(EventDef_1.EventDef.Game_StopBgm);
+        EventMgr_1.default.instance.dispatch(EventDef_1.EventDef.Game_StopBgm);
         ViewMgr_1.default.instance.closeView(ViewMgr_1.ViewDef.GameMainView);
         User_1.default.subEnergy(this._data.costEnergy);
         CachedQQBannerAd_1.default.hide();
