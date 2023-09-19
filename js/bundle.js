@@ -3686,7 +3686,7 @@ var GameMgr = /** @class */ (function (_super) {
         //todo：这里添加初始化主场景的代码。EventMgr.instance.dispatch(EventDef.App_CloseFirstLoadingView); 添加到你的关卡加载完成的回调中，关闭加载界面
         EventMgr_1.default.instance.regEvemt(EventDef_1.EventDef.Game_onGameComplate, this, this.onGameComplate);
         EventMgr_1.default.instance.regEvemt(EventDef_1.EventDef.Game_StartGame, this, this.LoadGame1);
-        // EventMgr_1.default.instance.regEvemt(EventDef_1.EventDef.Game_PlayBgm, this, this.playBgm);
+        EventMgr_1.default.instance.regEvemt(EventDef_1.EventDef.Game_PlayBgm, this, this.playBgm);
         EventMgr_1.default.instance.regEvemt(EventDef_1.EventDef.Game_StopBgm, this, this.stopBgm);
         EventMgr_1.default.instance.regEvemt(EventDef_1.EventDef.AD_OnShareAdFail_UseCancel, this, this.switchBanner);
         EventMgr_1.default.instance.regEvemt(EventDef_1.EventDef.Game_OnUserCrystalChange, this, this.saveGameData);
@@ -8514,7 +8514,7 @@ var GameView = /** @class */ (function (_super) {
         Laya.Physics.I.start();
     };
     GameView.prototype.onShow = function () {
-        EventMgr_1.default.instance.dispatch(EventDef_1.EventDef.Game_StopBgm);
+        //EventMgr_1.default.instance.dispatch(EventDef_1.EventDef.Game_StopBgm);
         ViewMgr_1.default.instance.closeView(ViewMgr_1.ViewDef.GameMainView);
         User_1.default.subEnergy(this._data.costEnergy);
         CachedQQBannerAd_1.default.hide();
